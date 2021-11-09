@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="esp">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 2</title>
+    </head>
+
+    <body>
+        
+        <script>
+
+            class Vuelo{
+
+                constructor(codigo, hora_llegada, hora_salida){
+
+                    this.codigo = codigo;
+                    this.hora_llegada = new Date(hora_llegada);
+                    this.hora_salida = new Date(hora_salida);
+                }
+
+                comprobarLlegada(){
+
+                    alert("El avión "+this.codigo+" llega a las "+this.hora_llegada+" horas");
+                }
+
+                comprobarIda(){
+
+                    alert("El avión "+this.codigo+" sale a las "+this.hora_salida+" horas");
+                }
+
+                cambiarLlegada(nuevaHora){
+
+                    this.hora_llegada = new Date(nuevaHora);
+                }
+
+                cambiarIda(nuevaHora){
+
+                    this.hora_salida = new Date(nuevaHora);
+                }
+            }       
+
+            class Aeropuerto{
+
+                constructor(nombre, ciudad, numeroVuelosDiarios){
+
+                    this.nombre = nombre;
+                    this.ciudad = ciudad;
+                    this.numeroVuelosDiarios = new Array();
+
+                    for(let i = 0; i < numeroVuelosDiarios; i++){
+
+                        this.numeroVuelosDiarios[i] = new Vuelo("Codigo: "+i, new Date("2021-03-15, 11:13:00") , new Date("2021-01-04, 11:14:00"));
+                    }
+                }
+
+                compruebaLlega(n){
+
+                    this.numeroVuelosDiarios[n].comprobarLlegada();
+                }
+
+                compruebaIda(n){
+
+                    this.numeroVuelosDiarios[n].comprobarIda();
+                }
+
+                cambioLlega(n, nuevaHora){
+
+                    this.numeroVuelosDiarios[n].cambiarLlegada(nuevaHora);
+                }
+
+                cambioLlega(n, nuevaHora){
+
+                    this.numeroVuelosDiarios[n].cambiarIda(nuevaHora);
+                }
+
+                comprobar(n){
+
+                    if(this.numeroVuelosDiarios[n].hora_llegada > this.numeroVuelosDiarios[n].hora_salida){
+
+                        alert(" Llega después de salir, lo normal ");
+                    }else{
+
+                        alert(" Llega antes WTF ");
+                    }
+                }
+            }
+
+            let air = new Aeropuerto("Machachuche", "Niuyork", 10); 
+            
+            air.comprobar(0);
+        </script>
+    </body>
+</html>

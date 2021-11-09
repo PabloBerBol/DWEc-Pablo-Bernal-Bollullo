@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+    <html lang="esp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 1</title>
+    </head>
+
+    <body>
+        <script>
+
+            class Alumno{
+
+                constructor(DNI, nombre, notaMedia){
+
+                    this.DNI = DNI;
+                    this.nombre = nombre;
+                    this.notaMedia = notaMedia;
+                }
+
+                consultarNota(){
+
+                    alert(" El alumno "+this.nombre+" tiene "+this.notaMedia);
+                }
+
+                cambiarNota(nuevaNota){
+
+                    this.notaMedia = nuevaNota;
+                }
+            }
+
+            class Colegio{
+
+                constructor (nombre, numeroAulas, numeroAlumnos){
+
+                    this.nombre = nombre;
+                    this.numeroAlumnos = numeroAulas;
+                    this.numeroAlumnos = new Array();
+
+                    for(let i = 0; i < numeroAlumnos; i++){
+
+                        this.numeroAlumnos[i] = new Alumno(i, "Alumno" + i, 5.0);
+                    }
+                }
+
+                consulta(n){
+
+                    this.numeroAlumnos[n].consultarNota();
+                }
+
+                cambiar(n, nuevaNota){
+
+                    this.numeroAlumnos[n].cambiarNota(nuevaNota);
+                }
+            }
+
+            let MDC = new Colegio("Mar de Cádiz", 10, 10);
+
+            MDC.consulta(0);
+            MDC.cambiar(0, 10.0);
+            MDC.consulta(0);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Ejercicio 3</title>
+    </head>
+
+    <body>
+
+        <p id = "demo"></p>
+
+        <script>
+
+            const ciudades = new Map([
+
+                ["Cádiz", 100000],
+                ["Jerez", 80000],
+                ["El Puerto de Santa María", 700000]
+            ]);
+
+            var opcion;
+            opcion = parseInt(prompt("Elija 1 para ver el mapa, 2 para longitud, 3 para borrar, 4 para añadir, 5 para más poblada y 6 para menos poblada"));
+
+            switch(opcion){
+
+                case 1:
+
+                    for(var [key, value] of ciudades){
+
+                        document.write(key + " = " + value);
+                        document.write("<br>");
+                    } 
+                break;
+
+                case 2:
+
+                    document.log(mapa.size);
+                break;
+
+                case 3:
+                    
+                    var buscar;
+                    buscar = prompt("Ciudad a borrar");
+
+                    var habi;
+                    habi = prompt("Habitantes de la ciudad");
+
+                    if(mapa.has(buscar, habi)){
+
+                        mapa.delete(buscar, habi);
+                        document.write("Borrado correctamente");
+                    }else{
+
+                        document.write("Algo falló");
+                    }
+                break;
+
+                case 4:
+
+                for(var [key, value] of ciudades){
+
+                    
+                }
+            }
+
+        </script>
+    </body>
+</html>

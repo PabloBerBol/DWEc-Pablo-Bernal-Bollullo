@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 9</title>
+</head>
+<body>
+    
+    <script>
+
+        let a;
+        let b;
+
+        a = prompt(" Valor a introducir ");
+        b = prompt(" Valor a introducir ");
+
+        let suma = parseInt(a) + parseInt(b);
+
+        if(a == b){
+
+            alert("NÚMEROS IGUALES");
+            let producto = suma*3;
+
+            document.write("La suma es: "+suma);
+            document.write('<br>');
+            document.write("El triple de la suma es: "+producto);
+        }else{
+
+            alert("NÚMEROS DISTINTOS");
+            document.write("La suma es: "+suma);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>
+
+        <script>
+
+            let contraseña;
+            let contraseña2;
+
+            contraseña = prompt(" Contraseña: ");
+            contraseña2 = prompt("Volver a introducir contraseña: ");
+
+            if(contraseña == contraseña2){
+
+                let nota1;
+                let nota2;
+                let nota3;
+                let suma;
+                let media;
+
+                nota1 = prompt(" Nota 1: ");
+                nota2 = prompt(" Nota 2: ");
+                nota3 = prompt(" Nota 3: ");
+
+                suma = parseInt(nota1) + parseInt(nota2) + parseInt(nota3);
+                media = suma/3;
+
+                document.write("La media del alumno es: "+media);
+                document.write('<br>');
+
+                if(media >= 7){
+
+                    document.write("Promociona");
+                }else{
+
+                    document.write("Repite");
+                }
+            }else{
+
+                document.write("Contraseña incorrecta");
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+

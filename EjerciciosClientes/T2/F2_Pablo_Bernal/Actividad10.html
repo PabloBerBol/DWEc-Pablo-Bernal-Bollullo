@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>actividad 10</title>
+</head>
+
+<body>
+    <script>
+
+        let a;
+
+        a = prompt(" Valor para restar 19 ");
+        
+        let resta;
+
+        if(a > 19){
+
+            resta = a-19;
+        }else{
+
+            resta = 19-a;
+        }
+
+        if(resta > 19){
+
+            alert("MAYOR DE 19");
+
+            let prod = resta*3;
+
+            document.write(" La resta da: "+resta+" y el triple es: "+prod);
+        }else{
+
+            alert("MENOR O IGUAL A 19");
+
+            document.write(" La resta da: "+resta);
+        }
+    </script>
+</body>
+</html>

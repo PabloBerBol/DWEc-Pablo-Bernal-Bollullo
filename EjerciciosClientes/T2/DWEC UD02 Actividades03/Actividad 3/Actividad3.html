@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="esp">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 3</title>
+    </head>
+
+    <body>
+        
+        <script>
+
+            class Paciente{
+
+                constructor(DNI, nombre, enfermedad){
+
+                    this.DNI = DNI;
+                    this.nombre = nombre;
+                    this.enfermedad = enfermedad;
+                }
+            }
+
+            class Hospital{
+
+                constructor(Nombre, ciudad, numPacientes){
+
+                    this.nombre = Nombre;
+                    this.ciudad = ciudad;
+                    this.numPacientes = new Array();
+
+                    for(let i = 0; i < numPacientes; i++){
+
+                        this.numPacientes[i] = new Paciente(i, "Paciente"+i, i);
+                    }
+                }
+
+                alta(codigo){
+
+                    for(let i = 0; i < cruz.numPacientes.length; i++){
+
+                        if(cruz.numPacientes[i].DNI == codigo){
+
+                            delete cruz.numPacientes[i];
+
+                            alert(" Paciente eliminado ");
+                        }else{
+
+                            alert(" Algo falló ");
+                        }
+                    }
+                }
+            }
+
+            let cruz = new Hospital("Red", "AA", 2);
+
+            let codigo;
+            codigo = prompt(" DNI del paciente a buscar ");
+
+            cruz.alta(codigo);
+        </script>
+    </body>
+</html>

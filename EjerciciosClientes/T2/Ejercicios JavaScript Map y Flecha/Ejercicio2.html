@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Ejercicio 2</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            let valor;
+            let valor2;
+            valor = prompt(" Valor ");
+            valor2 = prompt(" Valor 2 ");
+
+            var opcion;
+            opcion = parseInt(prompt("1 para sumar, 2 para restar, 3 para producto y 4 para dividir"));
+
+            switch(opcion){
+
+            case 1:
+
+                    let suma = parseInt(valor)+parseInt(valor2);
+
+                    document.write("La suma es: "+suma);
+                break;
+
+                case 2:
+
+                    let resta = parseInt(valor)-parseInt(valor2);
+
+                    document.write("La resta es: "+resta);
+                break;
+
+
+                case 3:
+
+                    let producto = parseInt(valor)*parseInt(valor2);
+
+                    document.write("El producto es:" +producto);
+                break;
+
+                case 4:
+
+                    let dividir = parseInt(valor)/parseInt(valor2);
+
+                    document.write(" El cociente es: "+dividir);
+                break;
+            }
+        </script>
+    </body>
+</html>

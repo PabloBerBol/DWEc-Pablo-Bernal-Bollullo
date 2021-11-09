@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="esp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 1</title>
+    </head>
+
+    <body>
+        <script>
+
+            function aleatorio(min, max){
+
+                return parseInt(Math.random() * (max - min) + min);
+            }
+
+            var hola = aleatorio(0,10);
+
+            valor = prompt("Número siguiente a "+hola);
+
+            if(valor == hola+1 || valor == hola-1){
+
+                document.write("BIEN HECHO");
+            }else{
+
+                document.write("NO COINCIDE");
+            }
+
+            
+
+            
+        </script>
+    </body>
+</html>
